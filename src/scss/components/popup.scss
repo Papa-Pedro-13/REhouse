@@ -1,0 +1,76 @@
+.popup {
+  $white-100: #fff;
+  backdrop-filter: blur(14px);
+  background-color: #000000b2;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  z-index: 2000;
+  transition: opacity 0.4s ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+
+    .popup__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // .popup__wrapper
+  &__wrapper {
+    display: flex;
+    // align-items: center;
+    padding-top: 36px;
+    min-height: 100%;
+  }
+
+  // .popup__content
+  &__content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    max-width: rem(520);
+    transform: translateY(rem(-200));
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  // .popup__close
+  &__close {
+    position: absolute;
+
+    /** Установить свои значения */
+    top: rem(-20);
+    right: rem(20);
+    width: rem(40);
+    height: rem(40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #ffffff80;
+    border-radius: rem(8);
+  }
+
+  &__headline {
+    font-size: 24px;
+  }
+  &__text {
+    margin: 16px 0 32px;
+  }
+  .contact-block__form {
+  }
+  .contact-block__input {
+  }
+  .contact-block__select {
+  }
+  .contact-block__checkbox {
+  }
+}

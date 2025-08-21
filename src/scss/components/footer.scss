@@ -1,0 +1,28 @@
+.footer {
+  padding: 40px 0;
+  &__container {
+    gap: 40px;
+  }
+  &__logo {
+    display: none;
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px 48px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__email {
+    color: #ffffff80;
+  }
+  &__address {
+    color: #ffffff80;
+  }
+  &__desc {
+    color: #ffffff80;
+  }
+}

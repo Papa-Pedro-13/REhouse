@@ -1,0 +1,64 @@
+.accordion {
+  /** Установить свои значения */
+  $radius: 4;
+  $icon-size: 24;
+
+  // .accordion__item
+  &__item {
+    transition: 0.3s ease-in-out;
+
+    &.open {
+      .accordion__header {
+        &::before {
+          height: 0;
+        }
+      }
+
+      .accordion__content {
+        height: max-content;
+
+        /** Установить свои значения */
+        padding-top: 24px;
+      }
+    }
+  }
+
+  // .accordion__header
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-right: 24px;
+    transition: background 0.3s ease-in-out;
+
+    &::after {
+      width: rem($icon-size);
+      height: 2px;
+      content: '';
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    &::before {
+      width: 2px;
+      height: rem($icon-size);
+      content: '';
+      position: absolute;
+      right: 11px;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  // .accordion__content
+  &__content {
+    height: 0;
+    overflow: hidden;
+    color: #ffffff80;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}

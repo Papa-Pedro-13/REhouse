@@ -1,0 +1,55 @@
+<div class="popup" data-popup="popup-1" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content">
+      <div class="popup__container">
+        <button class="popup__close button-close" type="button">x</button>
+        <div class="popup__body">
+          <h2 data-aos="fade-up" class="popup__headline">
+            Заполните <br />
+            форму
+          </h2>
+          <p class="popup__text text-small">
+            и наш специалист свяжется с вами в течении полу часа
+          </p>
+          <form class="contact-block__form">
+            <input
+              class="contact-block__input"
+              type="text"
+              class="form__input"
+              placeholder="Ваше имя"
+              required
+            />
+            <input
+              class="contact-block__input"
+              type="text"
+              class="form__input"
+              placeholder="Телефон"
+              required
+            />
+            <select class="contact-block__select" name="" id="" required>
+              <option value="" disabled selected hidden>
+                Как с вами связаться?
+              </option>
+              <option value="phone">Телефон</option>
+              <option value="telegram">Telegram</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+            <label class="contact-block__checkbox checkbox text-small">
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                name="agreement"
+                required
+              />
+              <span class="checkbox__box"></span>
+              Согласен на обработку персональных данных
+            </label>
+            <button class="contact-block__btn btn" type="submit">
+              <span> Отправить </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

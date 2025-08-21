@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url('../fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../fonts/RFDewiExtended-Semibold.eot');
+  src: local('RF Dewi Extended Semibold'), local('RFDewiExtended-Semibold'),
+    url('../fonts/RFDewiExtended-Semibold.eot') format('embedded-opentype'),
+    url('../fonts/RFDewiExtended-Semibold.woff2') format('woff2'),
+    url('../fonts/RFDewiExtended-Semibold.woff') format('woff'),
+    url('../fonts/RFDewiExtended-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Extended';
+  src: url('../fonts/RFDewiExtended-Regular.eot');
+  src: local('RF Dewi Extended Regular'), local('RFDewiExtended-Regular'),
+    url('../fonts/RFDewiExtended-Regular.eot') format('embedded-opentype'),
+    url('../fonts/RFDewiExtended-Regular.woff2') format('woff2'),
+    url('../fonts/RFDewiExtended-Regular.woff') format('woff'),
+    url('../fonts/RFDewiExtended-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi Expanded';
+  src: url('../fonts/RFDewiExpanded-Regular.eot');
+  src: local('RF Dewi Expanded Regular'), local('RFDewiExpanded-Regular'),
+    url('../fonts/RFDewiExpanded-Regular.eot') format('embedded-opentype'),
+    url('../fonts/RFDewiExpanded-Regular.woff2') format('woff2'),
+    url('../fonts/RFDewiExpanded-Regular.woff') format('woff'),
+    url('../fonts/RFDewiExpanded-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi';
+  src: url('../fonts/RFDewi-Regular.eot');
+  src: local('RF Dewi Regular'), local('RFDewi-Regular'),
+    url('../fonts/RFDewi-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RFDewi-Regular.woff2') format('woff2'),
+    url('../fonts/RFDewi-Regular.woff') format('woff'),
+    url('../fonts/RFDewi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Organetto Exp';
+  src: local('Organetto Exp'), local('Organetto Exp'),
+    url('../fonts/organetto-regularexp.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Organetto Ext';
+  src: local('Organetto Ext'), local('Organetto Ext'),
+    url('../fonts/organetto-regularext.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

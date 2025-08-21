@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__headline" data-aos="fade-up">
+              <h1 class="hero__h1">Тюнинг</h1>
+              <h1 class="hero__h1">ателье</h1>
+            </div>
+            <div class="hero__subtitle label-large">2025 © Morendi</div>
+            <p class="hero__info text-large" data-aos="fade-up">
+              Morendi — ваш выбор в мире премиального тюнинга автомобилей.
+              Чип-тюнинг, спортивные тормозные системы, кованые диски и
+              детейлинг — всё в одном месте
+            </p>
+            <a
+              href="#"
+              data-type="popup-1"
+              class="hero__link btn"
+              data-aos="fade-up"
+            >
+              <span> Заказать тюнинг </span>
+            </a>
+            <a href="#about" class="hero__anchor">
+              <svg
+                width="17"
+                height="19"
+                viewBox="0 0 17 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.8"
+                  d="M8.5 0V17M8.5 17L16 9.5M8.5 17L1 9.5"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__container">
+            <p class="about__title label-large" data-aos="fade-up">О нас</p>
+            <p class="about__text text-large" data-aos="fade-up">
+              Профессиональный чип-тюнинг двигателя, калибровка трансмиссий.
+              Установка премиальных тормозных систем. Подбор и монтаж кованых
+              дисков. Премимум детейлинг мирового уровня
+              <br /><br />
+              Morendi — когда тюнинг становится искусством
+            </p>
+          </div>
+        </section>
+
+        <section class="product-cards">
+          <a class="product-card" href="./tuning.html">
+            <img
+              class="product-card__bg"
+              src="./images/product-card-bg1.png"
+              alt=""
+            />
+            <h3 data-aos="fade-up" class="product-card__title">Чип-тюнинг</h3>
+            <p class="product-card__subtitle text-small">
+              Профессиональная настройка двигателя, которая увеличивает мощность
+              и крутящий момент без ущерба для ресурса
+            </p>
+          </a>
+          <a class="product-card" href="./brakes.html">
+            <img
+              class="product-card__bg"
+              src="./images/product-card-bg2.png"
+              alt=""
+            />
+            <h3 data-aos="fade-up" class="product-card__title">
+              Тормозные системы
+            </h3>
+            <p class="product-card__subtitle text-small">
+              Улучшенные тормозные системы Morendi обеспечивают максимальную
+              эффективность торможения даже при экстремальных нагрузках
+            </p>
+          </a>
+          <a class="product-card" href="./disks.html">
+            <img
+              class="product-card__bg"
+              src="./images/product-card-bg3.png"
+              alt=""
+            />
+            <h3 data-aos="fade-up" class="product-card__title">Диски</h3>
+            <p class="product-card__subtitle text-small">
+              Мы подбираем и устанавливаем диски, которые обеспечивают
+              максимальную прочность, легкость и эффективность
+            </p>
+          </a>
+          <a class="product-card" href="./detailing.html">
+            <img
+              class="product-card__bg"
+              src="./images/product-card-bg4.png"
+              alt=""
+            />
+            <h3 data-aos="fade-up" class="product-card__title">Детейлинг</h3>
+            <p class="product-card__subtitle text-small">
+              Автомобиль должен выглядеть безупречно — всегда
+            </p>
+          </a>
+        </section>
+        <section class="big-frame">
+          <div class="big-frame__container">
+            <p class="big-frame__text text-large" data-aos="fade-down">
+              Morendi — это больше, чем просто тюнинг. Мы создаем уникальные
+              инженерные решения для премиальных автомобилей, объединяя высокие
+              технологии, безопасность и страсть к скорости
+            </p>
+            <a
+              href="#"
+              data-type="popup-1"
+              class="big-frame__link btn"
+              data-aos="fade-up"
+            >
+              <span> Заказать тюнинг </span>
+            </a>
+          </div>
+        </section>
+        @@include('html/contactForm.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popupExample.html') @@include('html/script.html')
+  </body>
+</html>

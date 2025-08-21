@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Тормозные системы' })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <section class="title-block">
+          <div class="title-block__container">
+            <h1 class="title-block__headline" data-aos="fade-up">
+              Тормозные<br />
+              системы
+            </h1>
+          </div>
+        </section>
+        <section class="intro">
+          <div class="intro__container">
+            <img src="./images/brakes-intro-bg.jpg" alt="" class="intro__bg" />
+            <p class="intro__title text-large" data-aos="fade-up">
+              Премиальные тормозные системы для города и трека
+            </p>
+            <p class="intro__desc text-small" data-aos="fade-up">
+              Установка спортивных тормозов на автомобили премиум-класса. Всё
+              адаптировано под ваш автомобиль, мощность и условия эксплуатации
+            </p>
+            <button
+              data-type="popup-1"
+              class="intro__btn btn"
+              data-aos="fade-up"
+            >
+              <span> Заказать тормозные системы </span>
+            </button>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages__container">
+            <div class="advantages__text-block">
+              <h2 data-aos="fade-up" class="advantages__title">
+                Преимущества тормозов Morendi:
+              </h2>
+              <ul class="advantages__list" data-aos="fade-up">
+                <li class="advantages__item text-large">
+                  Уменьшение веса за счёт кованых деталей
+                </li>
+                <li class="advantages__item text-large">
+                  Стабильная работа при экстремальных нагрузках
+                </li>
+                <li class="advantages__item text-large">
+                  Эффективное торможение и устойчивость
+                </li>
+                <li class="advantages__item text-large">
+                  Эстетика премиум-сегмента
+                </li>
+              </ul>
+              <p data-aos="fade-up" class="advantages__desc text-medium">
+                с Morendi вы уверены в каждом движении
+              </p>
+            </div>
+            <div class="advantages__video-block video-block">
+              <video
+                data-aos="fade-up"
+                class="video-block__player"
+                poster="./images/poster1.jpg"
+                loop
+                controls
+              >
+                <source src="./static/video1.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+              <button class="video-block__play-btn">
+                <svg
+                  class="video-block__play-icon"
+                  width="27"
+                  height="39"
+                  viewBox="0 0 27 39"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27 19.5L0 39L-1.70474e-06 0L27 19.5Z"
+                    fill="white"
+                    fill-opacity="0.8"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button data-type="popup-1" class="advantages__btn btn">
+              <span> Связаться с нами </span>
+            </button>
+          </div>
+        </section>
+
+        @@include('html/portfolio.html')
+
+        <section class="offer">
+          <div class="offer__container">
+            <h2 data-aos="fade-up" class="offer__headline">
+              Закажите тормозные системы у нас
+            </h2>
+            <p data-aos="fade-up" class="offer__desc text-small">
+              Увеличение мощности за счет перепрограммирования блока управления
+              двигателем без внесения конструктивных изменений в аппаратную
+              часть (железо) автомобиля
+            </p>
+            <button data-type="popup-1" class="offer__btn btn">
+              <span> Записаться </span>
+            </button>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages__container">
+            <div class="advantages__text-block">
+              <h2 data-aos="fade-up" class="advantages__title">
+                Видео процесса
+              </h2>
+              <p data-aos="fade-up" class="advantages__subtitle text-large">
+                Увеличение мощности за счет перепрограммирования блока
+                управления двигателем без внесения конструктивных изменений в
+                аппаратную часть (железо) автомобиля
+              </p>
+              <p data-aos="fade-up" class="advantages__label text-small">
+                Увеличение мощности за счет перепрограммирования блока
+                управления двигателем без внесения конструктивных изменений в
+                аппаратную часть (железо) автомобиля
+              </p>
+            </div>
+            <div class="advantages__video-block video-block">
+              <video
+                data-aos="fade-up"
+                class="video-block__player"
+                poster="./images/poster2.jpg"
+                loop
+                controls
+              >
+                <source src="./static/video1.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+              <button class="video-block__play-btn">
+                <svg
+                  class="video-block__play-icon"
+                  width="27"
+                  height="39"
+                  viewBox="0 0 27 39"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27 19.5L0 39L-1.70474e-06 0L27 19.5Z"
+                    fill="white"
+                    fill-opacity="0.8"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button data-type="popup-1" class="advantages__btn btn">
+              <span> Связаться с нами </span>
+            </button>
+          </div>
+        </section>
+        @@include('html/popular-reviews.html') @@include('html/reviews.html')
+        @@include('html/contactForm.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popupExample.html') @@include('html/script.html')
+  </body>
+</html>

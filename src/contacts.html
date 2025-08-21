@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Контакты' })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <section class="title-block">
+          <div class="title-block__container">
+            <h1 class="title-block__headline">Контакты</h1>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__container">
+            <div class="footer__contacts">
+              <h2 data-aos="fade-up" class="footer__phone">8 495 796 00 96</h2>
+              <p class="footer__email text-large">detailing@morendi.ru</p>
+              @@include('./html/socialIcons.html', {})
+              <p class="contacts__desc text-small">
+                Овражная ул., 12, рабочий посёлок Новоивановское
+              </p>
+              <p class="contacts__desc text-small mt-40">Режим работы</p>
+              <p class="contacts__desc text-small">
+                Понедельник - Пятница  с 10:00 до 20:00 <br />
+                Суббота и Воскресенье —  по предварительной записи
+              </p>
+            </div>
+            <a class="contacts__map-block" href="#">
+              <svg
+                width="24"
+                height="30"
+                viewBox="0 0 24 30"
+                fill="none"
+                class="contacts__map-icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.0004 0.833344C5.75152 0.833344 0.667108 5.91776 0.667108 12.1596C0.626024 21.29 11.5698 28.8607 12.0004 29.1667C12.0004 29.1667 23.3749 21.29 23.3338 12.1667C23.3338 5.91776 18.2494 0.833344 12.0004 0.833344ZM12.0004 17.8333C8.86961 17.8333 6.33377 15.2975 6.33377 12.1667C6.33377 9.03584 8.86961 6.50001 12.0004 6.50001C15.1313 6.50001 17.6671 9.03584 17.6671 12.1667C17.6671 15.2975 15.1313 17.8333 12.0004 17.8333Z"
+                  fill="white"
+                />
+              </svg>
+              <button class="contacts__btn btn">
+                <span> Построить маршрут </span>
+              </button>
+            </a>
+          </div>
+        </section>
+        <section class="big-frame big-frame--contacts">
+          <div class="big-frame__container">
+            <p class="big-frame__text text-large" data-aos="fade-up">
+              Добро пожаловать в Morendi — премимум тюнинг-ателье международного
+              уровня. Мы создаём индивидуальные проекты: от увеличения мощности
+              через чип-тюнинг до полного детейлинга автомобиля. Каждая услуга —
+              это инженерная точность, сертифицированные технологии и
+              безупречный стиль
+            </p>
+          </div>
+        </section>
+        @@include('html/contactForm.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popupExample.html') @@include('html/script.html')
+  </body>
+</html>

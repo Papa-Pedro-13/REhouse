@@ -1,0 +1,40 @@
+.checkboxes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-wrap: nowrap;
+
+  // .checkbox__input
+  &__input {
+    appearance: none;
+    position: absolute;
+
+    /* Checked */
+    &:checked + .checkbox__box {
+      background-color: #fff;
+      border-color: #fff;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: url('data:image/svg+xml,<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99991 11.17L1.82991 7L0.409912 8.41L5.99991 14L17.9999 2L16.5899 0.589996L5.99991 11.17Z" fill="black"/></svg>');
+      }
+    }
+  }
+
+  // .checkbox__box
+  &__box {
+    height: 24px;
+    flex: 0 0 24px;
+    border: 2px solid #fff;
+  }
+}
