@@ -93,13 +93,24 @@ h1 {
   border: 1px solid #BABABA;
   color: #FFFFFFCC;
   border-radius: 50px;
+  transition-property: all !important;
+  transition: all .3s ease-in-out;
 
-  &:hover {}
+  &:hover {
+    color: #161616;
+    background-color: #FFFFFFCC;
+  }
 }
 
 .btn-white {
   background-color: #CACACA;
   color: #000;
+
+  &:hover {
+    color: #CACACA;
+    background: #5454541F;
+    backdrop-filter: blur(74px);
+  }
 }
 
 h2 {

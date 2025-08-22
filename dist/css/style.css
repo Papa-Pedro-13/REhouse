@@ -838,10 +838,22 @@ h1 {
   border: 1px solid #BABABA;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 50px;
+  transition-property: all !important;
+  transition: all 0.3s ease-in-out;
 }
+.btn:hover {
+  color: #161616;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .btn-white {
   background-color: #CACACA;
   color: #000;
+}
+.btn-white:hover {
+  color: #CACACA;
+  background: rgba(84, 84, 84, 0.1215686275);
+  backdrop-filter: blur(74px);
 }
 
 h2 {
@@ -1737,6 +1749,10 @@ video {
     backdrop-filter: blur(74px);
     background: rgba(84, 84, 84, 0.1215686275);
     padding: 12px 26px;
+  }
+  .header__phone.btn:hover {
+    background: #CACACA;
+    color: #000;
   }
   .hero {
     padding: 60px 0;

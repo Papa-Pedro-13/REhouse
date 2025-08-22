@@ -41,6 +41,11 @@
       backdrop-filter: blur(74px);
       background: #5454541F;
       padding: 12px 26px;
+
+      &:hover {
+        background: #CACACA;
+        color: #000;
+      }
     }
 
   }
