@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'Контакты' })
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html')
+
+    <main class="page">
+      <section class="page-header">
+        <div class="page-header__container">
+          <h1 class="page-header__headline">
+            Контакты
+          </h1>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <div class="contacts__left">
+            <a href="tel:+79782001717" class="contacts__phone">
+              +7 (978) 200-17-17
+            </a>
+            <p class="contacts__text text-small">
+              Пн-Пт 9:00 - 21:00 <br>
+              Вс: По предварительной договоренности
+            </p>
+            <a href="mailto:mail@rehaus.ru" class="contacts__mail">mail@rehaus.ru</a>
+            @@include('html/socialIcons.html', {})
+          </div>
+          <div class="contacts__right">
+            <div class="contacts__map-icon">
+              <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.0004 0.333344C5.75152 0.333344 0.667108 5.41776 0.667108 11.6596C0.626024 20.79 11.5698 28.3607 12.0004 28.6667C12.0004 28.6667 23.3749 20.79 23.3338 11.6667C23.3338 5.41776 18.2494 0.333344 12.0004 0.333344ZM12.0004 17.3333C8.86961 17.3333 6.33377 14.7975 6.33377 11.6667C6.33377 8.53584 8.86961 6.00001 12.0004 6.00001C15.1313 6.00001 17.6671 8.53584 17.6671 11.6667C17.6671 14.7975 15.1313 17.3333 12.0004 17.3333Z"
+                  fill="#111111" />
+              </svg>
+            </div>
+            <img class='contacts__img' src="./images/map-contacts.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      @@include('html/contactForm.html')
+    </main>
+
+    @@include('html/footer.html')
+  </div>
+
+  @@include('html/popupExample.html') @@include('html/script.html')
+</body>
+
+</html>

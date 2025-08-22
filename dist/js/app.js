@@ -143,8 +143,14 @@ if (accToggleList.length > 0) {
   accToggleList.forEach((accToggle) => {
     accToggle.addEventListener('click', () => {
       accToggle.closest('.accordion').classList.toggle('open')
-
     })
+  })
+}
+
+const filterIcon = document.querySelector('.filters__icon')
+if (filterIcon) {
+  filterIcon.addEventListener('click', () => {
+    filterIcon.closest('.filters').classList.toggle('open')
   })
 }
 

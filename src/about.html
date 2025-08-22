@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'О компании' })
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html')
+
+    <main class="page">
+      <section class="page-header">
+        <div class="page-header__container">
+          <h1 class="page-header__headline">
+            О компании
+          </h1>
+          <p class="page-header__subtitle text-small">
+            Работаем с 2012 года. Геология, геодезия, архитектурное и конструктивное проектирование — в одном окне
+          </p>
+        </div>
+      </section>
+      <section class="big-video">
+        <div class="big-video__container">
+          <h3 class="big-video__title">
+            Мы специализируемся на индивидуальном жилищном строительстве и предлагаем широкий выбор решени, учитывающих
+            все пожелания клиента. Наша команда обеспечивает комплексный подход на каждом этапе: от разработки концепции
+            до сдачи дома под ключ.
+          </h3>
+          <div class="big-video__video-block video-block" data-aos="fade-up">
+            <video class="video-block__player" poster="./images/poster1.png" loop controls>
+              <source src="./static/video1.mp4" type="video/mp4" />
+              Ваш браузер не поддерживает видео.
+            </video>
+            <button class="video-block__play-btn">
+              <svg width="32" height="63" viewBox="0 0 32 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M31.75 31.5L0.25 0V63L31.75 31.5Z" fill="white" />
+              </svg>
+
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="step-block">
+        <div class="step-block__container">
+          <h2 class="step-block__headline">Наши ценности</h2>
+          <div class="step-block__list">
+            <div class="step-block__card" data-aos="fade-up">
+              <div class="step-block__number">
+                01
+              </div>
+              <h4 class="step-block__title">Опыт</h4>
+              <p class="step-block__desc text-small">
+                Команда опытных специалистов и менеджеров, которые способствуют развитию компании и реализации проектов
+                любой сложности
+              </p>
+            </div>
+            <div class="step-block__card" data-aos="fade-up">
+              <div class="step-block__number">
+                02
+              </div>
+              <h4 class="step-block__title">Грамотность</h4>
+              <p class="step-block__desc text-small">Грамотность во всём: от консультаций по строительству до возведения
+                под ключ</p>
+            </div>
+            <div class="step-block__card" data-aos="fade-up">
+              <div class="step-block__number">
+                03
+              </div>
+              <h4 class="step-block__title">
+                Забота о времени клиентов
+              </h4>
+              <p class="step-block__desc text-small">
+                Эффективная организация времени на подготовительные процессы, ведение документооборота, проектирование и
+                реализацию проектов
+              </p>
+            </div>
+            <div class="step-block__card" data-aos="fade-up">
+              <div class="step-block__number">
+                04
+              </div>
+              <h4 class="step-block__title">
+                Принципы эргономичности
+              </h4>
+              <p class="step-block__desc text-small">
+                Создание удобных и функциональных пространств для жизни и работы, учёт потребностей клиента и законов
+                эргономики
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="big-cards">
+        <div class="big-cards__container">
+          <div class="big-cards__item">
+            <img src="./images/big-card1.png" alt="" class="big-cards__img">
+            <h3 class="big-cards__title" data-aos="fade-down">Заботимся о вашем бюджете</h3>
+            <p class="big-cards__desc text-small" data-aos="fade-up">Наша команда обеспечивает комплексный подход
+              на каждом этапе: от
+              разработки концепции до сдачи дома под ключ.</p>
+            <a href="#" class="btn big-cards__btn" data-aos="fade-up">Подробнее</a>
+          </div>
+          <div class="big-cards__item">
+            <img src="./images/big-card2.png" alt="" class="big-cards__img">
+            <h3 class="big-cards__title" data-aos="fade-down">Вам не нужо присутсвовать на объекте </h3>
+            <p class="big-cards__desc text-small" data-aos="fade-up">Наша команда обеспечивает комплексный подход
+              на каждом этапе: от
+              разработки концепции до сдачи дома под ключ.</p>
+            <a href="#" class="btn big-cards__btn" data-aos="fade-up">Подробнее</a>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/contactForm.html')
+    </main>
+
+    @@include('html/footer.html')
+  </div>
+
+  @@include('html/popupExample.html') @@include('html/script.html')
+</body>
+
+</html>
