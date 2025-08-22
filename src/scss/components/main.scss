@@ -388,6 +388,10 @@ h3 {
     margin-top: 420px;
   }
 
+  &__img {
+    display: none;
+  }
+
   &__text-block {
     display: flex;
     flex-direction: column;
