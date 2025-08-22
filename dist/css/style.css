@@ -1039,7 +1039,7 @@ h2 {
 .way__card:last-child {
   z-index: 2;
   position: relative;
-  margin-top: -100px;
+  margin-top: 16px;
 }
 .way__card-number {
   color: #5B5B5B;
@@ -1723,9 +1723,6 @@ video {
   .map__icon--desktop {
     display: block;
   }
-  .way__card:last-child {
-    margin-top: -50px;
-  }
   .hero__top {
     max-width: 400px;
   }
@@ -1905,9 +1902,6 @@ video {
   }
   .way__card {
     padding: 60px;
-  }
-  .way__card:last-child {
-    margin-top: -100px;
   }
   .way__top {
     border-radius: 30px;

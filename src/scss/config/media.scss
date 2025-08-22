@@ -11,9 +11,6 @@
     }
   }
 
-  .way__card:last-child {
-    margin-top: -50px;
-  }
 
   .hero__top {
     max-width: 400px;
@@ -244,10 +241,6 @@
 
     &__card {
       padding: 60px;
-
-      &:last-child {
-        margin-top: -100px;
-      }
     }
 
     &__top {
