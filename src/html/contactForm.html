@@ -1,49 +1,42 @@
 <section class="contact-block">
   <div class="contact-block__container">
-    <div class="contact-block__info">
-      <h2 data-aos="fade-up" class="contact-block__headline">
-        Свяжитесь <br />
-        с нами
-      </h2>
-      <p class="contact-block__text text-small">
-        Заполните форму на сайте или свяжитесь с нами по телефону
-      </p>
-      <p class="contact-block__phone">8 495 796 00 96</p>
+    <div class="contact-block__inner">
+
+      <div class="contact-block__top">
+        <h3 class="contact-block__headline" data-aos="fade-down">Приглашаем <br>
+          на видео-экскурсию</h3>
+        <p class="contact-block__subtitle text-small" data-aos="fade-down">
+          Получите консультацию и смету в течение 1 дня
+        </p>
+        <form class="contact-block__form" data-aos="fade-up">
+          <input class="contact-block__input" type="text" class="form__input" placeholder="Имя" required />
+          <input class="contact-block__input" type="text" class="form__input form__input--phone"
+            placeholder="+7 (999) 999 99 99" required />
+          <button class="contact-block__btn btn btn-white" type="submit">
+            подробнее
+          </button>
+          <p class="contact-block__text text-small">Отправляя заявку, Вы соглашаетесь с
+            <a href="#" class='contact-block__link'>
+              Политикой
+              конфиденциальности
+            </a>
+          </p>
+        </form>
+      </div>
+      <div class="contact-block__video-block video-block" data-aos="fade-up">
+        <video class="video-block__player" poster="./images/poster1.png" loop controls>
+          <source src="./static/video1.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video>
+        <button class="video-block__play-btn">
+          <svg class="video-block__play-icon" width="30" height="34" viewBox="0 0 30 34" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.5"
+              d="M26.7149 11.9626L9.75951 0.991445C5.76734 -1.59173 0.500004 1.27385 0.500003 6.02887L0.500002 27.9711C0.500002 32.7262 5.76733 35.5917 9.75951 33.0086L26.7149 22.0374C30.3689 19.6731 30.3689 14.3269 26.7149 11.9626Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
     </div>
-    <form class="contact-block__form" data-aos="fade-up">
-      <input
-        class="contact-block__input"
-        type="text"
-        class="form__input"
-        placeholder="Ваше имя"
-        required
-      />
-      <input
-        class="contact-block__input"
-        type="text"
-        class="form__input"
-        placeholder="Телефон"
-        required
-      />
-      <select class="contact-block__select" name="" id="" required>
-        <option value="" disabled selected hidden>Как с вами связаться?</option>
-        <option value="phone">Телефон</option>
-        <option value="telegram">Telegram</option>
-        <option value="whatsapp">WhatsApp</option>
-      </select>
-      <label class="contact-block__checkbox checkbox text-small">
-        <input
-          class="checkbox__input"
-          type="checkbox"
-          name="agreement"
-          required
-        />
-        <span class="checkbox__box"></span>
-        Согласен на обработку персональных данных
-      </label>
-      <button class="contact-block__btn btn" type="submit">
-        <span> Отправить </span>
-      </button>
-    </form>
   </div>
 </section>

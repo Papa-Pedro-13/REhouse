@@ -44,6 +44,7 @@
 
   // .popup__close
   &__close {
+    z-index: 2;
     position: absolute;
 
     /** Установить свои значения */
@@ -62,15 +63,16 @@
   &__headline {
     font-size: 24px;
   }
+
   &__text {
     margin: 16px 0 32px;
   }
-  .contact-block__form {
-  }
-  .contact-block__input {
-  }
-  .contact-block__select {
-  }
-  .contact-block__checkbox {
-  }
+
+  .contact-block__form {}
+
+  .contact-block__input {}
+
+  .contact-block__select {}
+
+  .contact-block__checkbox {}
 }

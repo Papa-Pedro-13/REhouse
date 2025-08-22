@@ -1,138 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { 'title': 'Главная' })
+@@include('html/head.html', { 'title': 'Главная' })
 
-  <body>
-    <div class="wrapper">
-      @@include('html/header.html')
+<body>
+  <div class="wrapper">
+    @@include('html/header.html')
 
-      <main class="page">
-        <section class="hero">
-          <div class="hero__container">
-            <div class="hero__headline" data-aos="fade-up">
-              <h1 class="hero__h1">Тюнинг</h1>
-              <h1 class="hero__h1">ателье</h1>
-            </div>
-            <div class="hero__subtitle label-large">2025 © Morendi</div>
-            <p class="hero__info text-large" data-aos="fade-up">
-              Morendi — ваш выбор в мире премиального тюнинга автомобилей.
-              Чип-тюнинг, спортивные тормозные системы, кованые диски и
-              детейлинг — всё в одном месте
+    <main class="page">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__top">
+
+            <h1 class="hero__h1" data-aos="fade-up">Надёжный дом — красивая история на годы вперёд</h1>
+            <p class="hero__subtitle text-small" data-aos="fade-up">
+              Проектируем и строим дома любой сложности и архитектурной формы. Прозрачная смета и усиленный контроль
+              качества — на каждом этапе
             </p>
-            <a
-              href="#"
-              data-type="popup-1"
-              class="hero__link btn"
-              data-aos="fade-up"
-            >
-              <span> Заказать тюнинг </span>
-            </a>
-            <a href="#about" class="hero__anchor">
-              <svg
-                width="17"
-                height="19"
-                viewBox="0 0 17 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.8"
-                  d="M8.5 0V17M8.5 17L16 9.5M8.5 17L1 9.5"
-                  stroke="white"
-                  stroke-opacity="0.5"
-                  stroke-width="1.5"
-                />
+            <div class="hero__buttons" data-aos="fade-up">
+              <a href="#portfolio" class="hero__btn btn btn-white">
+                Посмотреть проекты
+              </a>
+              <button data-type="popup-1" class="hero__btn btn">
+                Получить консультацию
+                </a>
+            </div>
+          </div>
+          <div class="hero__bottom">
+            <p class="hero__date text-small">© 2025</p>
+            <a href="#types" class="hero__anchor">
+              <svg width="19" height="27" viewBox="0 0 19 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 0V25M9.5 25L18 16.5M9.5 25L1 16.5" stroke="white" stroke-width="1.5" />
               </svg>
             </a>
           </div>
-        </section>
-        <section class="about" id="about">
-          <div class="about__container">
-            <p class="about__title label-large" data-aos="fade-up">О нас</p>
-            <p class="about__text text-large" data-aos="fade-up">
-              Профессиональный чип-тюнинг двигателя, калибровка трансмиссий.
-              Установка премиальных тормозных систем. Подбор и монтаж кованых
-              дисков. Премимум детейлинг мирового уровня
-              <br /><br />
-              Morendi — когда тюнинг становится искусством
-            </p>
+        </div>
+      </section>
+      <section class="types" id='types'>
+        <div class="types__container">
+          <h2 class="types__headline">
+            Типы домов
+          </h2>
+          <div class="types__list">
+            <div class="types__card" data-aos="fade-right">
+              <img src="./images/type1.png" alt="" class="types__img">
+              <div class="types__text">
+                <p class="types__title">Каркасные дома</p>
+                <p class="types__number">/01</p>
+              </div>
+              <div class="types__square">
+                <span>от</span>
+                15 000 м²
+              </div>
+            </div>
+            <div class="types__card" data-aos="fade-down">
+              <img src="./images/type2.png" alt="" class="types__img">
+              <div class="types__text">
+                <p class="types__title">Каменные дома</p>
+                <p class="types__number">/02</p>
+              </div>
+
+            </div>
+            <div class="types__card" data-aos="fade-up">
+              <img src="./images/type3.png" alt="" class="types__img">
+              <div class="types__text">
+                <p class="types__title">Бани</p>
+                <p class="types__number">/03</p>
+              </div>
+              <div class="types__square">
+                <span>от</span>
+                15 000 м²
+              </div>
+            </div>
+            <div class="types__card" data-aos="fade-down">
+              <img src="./images/type4.png" alt="" class="types__img">
+              <div class="types__text">
+                <p class="types__title">Беседки</p>
+                <p class="types__number">/04</p>
+              </div>
+              <div class="types__square">
+                <span>от</span>
+                15 000 м²
+              </div>
+            </div>
+            <div class="types__card" data-aos="fade-left">
+              <img src="./images/type5.png" alt="" class="types__img">
+              <div class="types__text">
+                <p class="types__title">Дома из бруса</p>
+                <p class="types__number">/05</p>
+              </div>
+              <div class="types__square">
+                <span>от</span>
+                15 000 м²
+              </div>
+            </div>
           </div>
-        </section>
-
-        <section class="product-cards">
-          <a class="product-card" href="./tuning.html">
-            <img
-              class="product-card__bg"
-              src="./images/product-card-bg1.png"
-              alt=""
-            />
-            <h3 data-aos="fade-up" class="product-card__title">Чип-тюнинг</h3>
-            <p class="product-card__subtitle text-small">
-              Профессиональная настройка двигателя, которая увеличивает мощность
-              и крутящий момент без ущерба для ресурса
-            </p>
-          </a>
-          <a class="product-card" href="./brakes.html">
-            <img
-              class="product-card__bg"
-              src="./images/product-card-bg2.png"
-              alt=""
-            />
-            <h3 data-aos="fade-up" class="product-card__title">
-              Тормозные системы
-            </h3>
-            <p class="product-card__subtitle text-small">
-              Улучшенные тормозные системы Morendi обеспечивают максимальную
-              эффективность торможения даже при экстремальных нагрузках
-            </p>
-          </a>
-          <a class="product-card" href="./disks.html">
-            <img
-              class="product-card__bg"
-              src="./images/product-card-bg3.png"
-              alt=""
-            />
-            <h3 data-aos="fade-up" class="product-card__title">Диски</h3>
-            <p class="product-card__subtitle text-small">
-              Мы подбираем и устанавливаем диски, которые обеспечивают
-              максимальную прочность, легкость и эффективность
-            </p>
-          </a>
-          <a class="product-card" href="./detailing.html">
-            <img
-              class="product-card__bg"
-              src="./images/product-card-bg4.png"
-              alt=""
-            />
-            <h3 data-aos="fade-up" class="product-card__title">Детейлинг</h3>
-            <p class="product-card__subtitle text-small">
-              Автомобиль должен выглядеть безупречно — всегда
-            </p>
-          </a>
-        </section>
-        <section class="big-frame">
-          <div class="big-frame__container">
-            <p class="big-frame__text text-large" data-aos="fade-down">
-              Morendi — это больше, чем просто тюнинг. Мы создаем уникальные
-              инженерные решения для премиальных автомобилей, объединяя высокие
-              технологии, безопасность и страсть к скорости
-            </p>
-            <a
-              href="#"
-              data-type="popup-1"
-              class="big-frame__link btn"
-              data-aos="fade-up"
-            >
-              <span> Заказать тюнинг </span>
-            </a>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about__container">
+          <h2 class="about__headline">
+            О нас
+          </h2>
+          <p class="about__desc" data-aos="fade-up">
+            Мы специализируемся на индивидуальном жилищном строительстве и предлагаем широкий выбор решени, учитывающих
+            все пожелания клиента. Наша команда обеспечивает комплексный подход на каждом этапе: от разработки концепции
+            до сдачи дома под ключ.
+          </p>
+          <div class="about__cards">
+            <div class="about__card" data-aos="fade-up">
+              на рынке
+              <span>5</span>лет
+            </div>
+            <div class="about__card" data-aos="fade-down">
+              строим более
+              <span>50</span>
+              домов/год
+            </div>
+            <div class="about__card" data-aos="fade-up">
+              рекомендуют
+              <span>90%</span>наших клиентов
+            </div>
           </div>
-        </section>
-        @@include('html/contactForm.html')
-      </main>
+          <a href="./about.html" class="btn btn-white" data-aos="fade-up">подробнее о компании</a>
+          <img src="./images/about.png" alt="" class="about__img" data-aos="fade-left">
+        </div>
+      </section>
+      <section class="portfolio" id='portfolio'>
+        <div class="portfolio__container">
+          <h2 class="portfolio__headline">Наши проекты</h2>
+          <div class="splide portfolio__slider" data-aos="fade-up">
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
+                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 21.5L1.70711 12.2071C1.31658 11.8166 1.31658 11.1834 1.70711 10.7929L11 1.5"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+              <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
+                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L10.2929 10.7929C10.6834 11.1834 10.6834 11.8166 10.2929 12.2071L1 21.5" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="./images/slider1.png" alt="" class="portfolio__img"></li>
+                <li class="splide__slide"><img src="./images/slider1.png" alt="" class="portfolio__img"></li>
+                <li class="splide__slide"><img src="./images/slider1.png" alt="" class="portfolio__img"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="way">
 
-      @@include('html/footer.html')
-    </div>
 
-    @@include('html/popupExample.html') @@include('html/script.html')
-  </body>
+        <div class="way__container">
+          <div class="way__top">
+            <h2 class="way__headline" data-aos="fade-up">При оплате 100% скидка 10%</h2>
+            <a href="#" class="btn way__btn btn-white" data-aos="fade-up">подробнее</a>
+          </div>
+          <div class="way__bottom">
+            <h2 class="way__headline" data-aos="fade-up">Прозрачный путь от идеи до готового дома</h2>
+            <div class="way__cards" data-aos="fade-left">
+              <div class="way__card">
+                <div class="way__card-number">01</div>
+                <div class="way__card-title">Консультация</div>
+                <p class="way__card-desc text-small">
+                  Свяжитесь с нами или заполните любую форму на сайте, наш менеджер свяжется с Вами в наиболее удобное
+                  время и ответит на все Ваши вопросы, предложит онлайн или оффлайн встречу в нашем офисе
+                </p>
+              </div>
+              <div class="way__card">
+                <div class="way__card-number">02</div>
+                <div class="way__card-title">Проект</div>
+                <p class="way__card-desc text-small">
+                  Разработка индивидуального проекта или выбор готового
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="map__container">
+          <h2 class="map__headline" data-aos="fade-down">
+            Где мы строим
+          </h2>
+          <img src="./images/map--desktop.svg" alt="" class="map__icon map__icon--desktop">
+          <img src="./images/map.svg" alt="" class="map__icon map__icon--mobile">
+          <div class="map__bottom">
+            <div class="map__text-block" data-aos="fade-up">
+              <h3 class="map__title">
+                Живём и строим в Крыму <br> и за его пределами
+              </h3>
+              <p class="map__desc text-small">
+                Мы работаем по всему Крыму, возводя качественные дома как в прибрежных зонах, так и в горных и степных
+                районах полуострова. Наша команда учитывает все особенности местного климата и ландшафта, чтобы
+                обеспечить комфорт и надежность вашего жилья на долгие годы.
+              </p>
+              <a href="#" class="btn btn-white map__btn">подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="big-cards">
+        <div class="big-cards__container">
+          <div class="big-cards__item">
+            <img src="./images/big-card1.png" alt="" class="big-cards__img">
+            <h3 class="big-cards__title" data-aos="fade-down">Заботимся о вашем бюджете</h3>
+            <p class="big-cards__desc text-small" data-aos="fade-up">Наша команда обеспечивает комплексный подход
+              на каждом этапе: от
+              разработки концепции до сдачи дома под ключ.</p>
+            <a href="#" class="btn big-cards__btn" data-aos="fade-up">Подробнее</a>
+          </div>
+          <div class="big-cards__item">
+            <img src="./images/big-card2.png" alt="" class="big-cards__img">
+            <h3 class="big-cards__title" data-aos="fade-down">Вам не нужо присутсвовать на объекте </h3>
+            <p class="big-cards__desc text-small" data-aos="fade-up">Наша команда обеспечивает комплексный подход
+              на каждом этапе: от
+              разработки концепции до сдачи дома под ключ.</p>
+            <a href="#" class="btn big-cards__btn" data-aos="fade-up">Подробнее</a>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/contactForm.html')
+    </main>
+
+    @@include('html/footer.html')
+  </div>
+
+  @@include('html/popupExample.html') @@include('html/script.html')
+</body>
+
 </html>

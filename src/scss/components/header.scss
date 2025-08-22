@@ -1,21 +1,23 @@
 .header {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(54px);
+  background: #111111;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   &__container {
-    padding-top: 8px;
-    padding-bottom: 8px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+
   &__contacts {
     display: none;
   }
 
   &__logo {
-    width: 64px;
+    width: 119px;
+    z-index: 999;
+    position: relative;
 
     img {
       width: 100%;
@@ -24,6 +26,10 @@
   }
 
   &__menu {
+    display: none;
+  }
+
+  &__phone.btn {
     display: none;
   }
 }
@@ -38,8 +44,9 @@
     display: flex;
     gap: 24px;
   }
-  &__item {
-  }
+
+  &__item {}
+
   &__link {
     text-transform: uppercase;
   }
@@ -52,12 +59,15 @@
 
   @include media-mx(992) {
     display: block;
+    z-index: 999;
     position: relative;
-    width: rem(32);
-    height: rem(8);
+    width: rem(28);
+    height: rem(14);
     cursor: pointer;
-    z-index: 5;
 
+
+
+    span,
     &::before,
     &::after {
       content: '';
@@ -66,7 +76,13 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: #A0A0A0;
+    }
+
+    span {
+      top: calc(50% - 1px);
+      width: 23px;
+
     }
 
     &::before {
@@ -77,17 +93,23 @@
       bottom: 0;
     }
 
-    // .menu-open & {
-    //   &::before {
-    //     top: calc(50% - rem(1));
-    //     transform: rotate(-45deg);
-    //   }
+    .menu-open & {
+      span {
+        width: 0;
+      }
 
-    //   &::after {
-    //     bottom: calc(50% - rem(1));
-    //     transform: rotate(45deg);
-    //   }
-    // }
+      &::before {
+        top: calc(50% - rem(1));
+        width: 15px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        width: 15px;
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
   }
 }
 
@@ -95,10 +117,10 @@
   min-height: 100lvh;
   position: fixed;
   width: 100%;
-  padding: 40px 0;
+  padding: 87px 0 40px;
   inset: 0;
-  background: #1a1a1a;
-  z-index: 999;
+  background: #111111;
+  z-index: 99;
   transform: translateX(-101%);
   transition: all 0.3s ease-in-out;
 
@@ -110,51 +132,101 @@
     flex-direction: column;
   }
 
+  .accordion-item,
+  .menu__link {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    height: fit-content;
+    line-height: 1;
+  }
+
+  .mobile-menu__contacts {
+    gap: 16px;
+  }
+
+  .mobile-menu__email {
+    line-height: 1.4;
+  }
+
   &__close {
     position: absolute;
     top: 27px;
     right: 27px;
   }
+
   &__container {
     gap: 40px;
   }
+
   &__contacts {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   &__email {
     color: #ffffff80;
   }
+
   &__address {
     color: #ffffff80;
   }
 }
 
-h2 {
-  font-family: 'Organetto Ext';
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 8%;
-  text-transform: uppercase;
+.menu__item {
+  cursor: pointer;
 }
 
-.text-large {
-  font-size: 14px;
-  font-family: 'RF Dewi Extended';
-}
-.text-medium,
-.text-small {
-  font-family: 'RF Dewi';
-  font-size: 13px;
-  line-height: 1.3;
-}
+.dropdown-toggle {
+  position: relative;
+  padding: 10px 0;
+  padding-right: 14px;
 
-.socials {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  &__item {
-    padding: 2px;
+  &::after {
+    position: absolute;
+    content: url('data:image/svg+xml,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.52428 5.27131L0.752948 1.49998L1.69561 0.557312L4.99562 3.85731L8.29561 0.557312L9.23828 1.49998L5.46695 5.27131C5.34193 5.39629 5.17239 5.4665 4.99562 5.4665C4.81884 5.4665 4.6493 5.39629 4.52428 5.27131Z" fill="%23707070"/></svg>');
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
   }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: #242424;
+  border-radius: 20px;
+  padding: 16px;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item {
+  display: block;
+  cursor: pointer;
+  padding: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  opacity: .8;
 }

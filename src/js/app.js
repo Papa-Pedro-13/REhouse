@@ -73,10 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = block.querySelector('.video-block__player');
     const playBtn = block.querySelector('.video-block__play-btn');
 
+
+    video.removeAttribute('controls');
+
     // Клик по кастомной кнопке
     playBtn.addEventListener('click', () => {
       if (video.paused) {
-        video.play();
+        video.play(); video.setAttribute('controls', 'controls');
+
       } else {
         video.pause();
       }
@@ -85,52 +89,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Синхронизация кнопки с состоянием видео
     video.addEventListener('play', () => {
       playBtn.style.opacity = '0';
-      playBtn.style.pointerEvents = 'none';
+      playBtn.style.pointerEvents = 'none'; video.setAttribute('controls', 'controls');
+
     });
     video.addEventListener('pause', () => {
       playBtn.style.opacity = '1';
-      playBtn.style.pointerEvents = 'auto';
+      playBtn.style.pointerEvents = 'auto'; video.removeAttribute('controls');
+
     });
 
     // Клик по видео (если controls не перехватили)
     video.addEventListener('click', (e) => {
       e.preventDefault(); // Попытка избежать конфликта с controls
       if (video.paused) {
-        video.play();
+        video.play(); video.setAttribute('controls', 'controls');
+
       } else {
         video.pause();
       }
     });
   });
 });
-if (document.querySelector('.gallery__slider')) {
-  new Splide('.gallery__slider', {
-    type: 'fade',
-    rewind: true,
-  }).mount();
-}
 if (document.querySelector('.portfolio__slider')) {
   new Splide('.portfolio__slider', {
-    type: 'fade',
+    // type: 'fade',
+    gap: 16,
     rewind: true,
-  }).mount();
-}
-if (document.querySelector('.slider-section__slider')) {
-  new Splide('.slider-section__slider', {
-    type: 'fade',
-    rewind: true,
-  }).mount();
-}
-if (document.querySelector('.step-slider__slider')) {
-  new Splide('.step-slider__slider', {
-    type: 'fade',
-    rewind: true,
-    mediaQuery: 'min',
-    breakpoints: {
-      992: {
-        destroy: true,
-      },
-    },
   }).mount();
 }
 if (document.querySelector('.popular-reviews__slider')) {
@@ -154,26 +138,14 @@ if (document.querySelector('.popular-reviews__slider')) {
   });
   splide2.mount();
 }
-if (document.querySelector('.reviews__slider')) {
-  var splide3 = new Splide('.reviews__slider', {
-    type: 'slide',
-    rewind: true,
-    mediaQuery: 'min',
-    gap: 16,
-    breakpoints: {
-      768: {
-        perPage: 2,
-        perMove: 1,
-      },
-      1024: {
-        perPage: 3,
-      },
-      1240: {
-        destroy: true,
-      },
-    },
-  });
-  splide3.mount();
+const accToggleList = document.querySelectorAll('.accordion-toggle')
+if (accToggleList.length > 0) {
+  accToggleList.forEach((accToggle) => {
+    accToggle.addEventListener('click', () => {
+      accToggle.closest('.accordion').classList.toggle('open')
+
+    })
+  })
 }
 
 new Accordion('.accordion', {
@@ -182,16 +154,16 @@ new Accordion('.accordion', {
   collapsedClass: 'open',
 });
 
-const preloader = document.querySelector('.preloader-container');
-const mask = document.querySelector('.preloader-mask');
+// const preloader = document.querySelector('.preloader-container');
+// const mask = document.querySelector('.preloader-mask');
 
-bodyLock(true);
-// После 2 циклов анимации убираем прелоадер и ЧБ фильтр
-let animationCount = 0;
-mask.addEventListener('animationiteration', () => {
-  animationCount++;
-  if (animationCount >= 3) {
-    preloader.classList.add('close');
-    bodyLock(false);
-  }
-});
+// bodyLock(true);
+// // После 2 циклов анимации убираем прелоадер и ЧБ фильтр
+// let animationCount = 0;
+// mask.addEventListener('animationiteration', () => {
+//   animationCount++;
+//   if (animationCount >= 3) {
+//     preloader.classList.add('close');
+//     bodyLock(false);
+//   }
+// });
