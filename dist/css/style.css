@@ -242,7 +242,7 @@ sup {
   flex-direction: column;
   min-height: 100%;
   /** Поменять на clip - если используется в проекте position: sticky */
-  overflow: hidden;
+  overflow: clip;
 }
 
 .page {
@@ -789,7 +789,7 @@ a {
   min-height: calc(100svh - 102px);
 }
 .hero__date {
-  color: #839D9B;
+  color: #839d9b;
 }
 .hero__bottom {
   margin-top: auto;
@@ -835,7 +835,7 @@ h1 {
   position: relative;
   background-color: inherit;
   overflow: hidden;
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 50px;
   transition-property: all !important;
@@ -847,11 +847,11 @@ h1 {
 }
 
 .btn-white {
-  background-color: #CACACA;
+  background-color: #cacaca;
   color: #000;
 }
 .btn-white:hover {
-  color: #CACACA;
+  color: #cacaca;
   background: rgba(84, 84, 84, 0.1215686275);
   backdrop-filter: blur(74px);
 }
@@ -859,7 +859,7 @@ h1 {
 h2 {
   font-size: 30px;
   line-height: 1.1;
-  color: #B7B7B7;
+  color: #b7b7b7;
 }
 
 .types {
@@ -890,7 +890,7 @@ h2 {
   justify-content: space-between;
 }
 .types__title {
-  color: #B7B7B7;
+  color: #b7b7b7;
 }
 .types__number {
   color: #585858;
@@ -906,7 +906,7 @@ h2 {
   font-size: 8px;
 }
 .types__square span {
-  color: #B7B7B7;
+  color: #b7b7b7;
   text-transform: uppercase;
 }
 
@@ -917,7 +917,7 @@ h2 {
   display: none;
 }
 .about__desc {
-  color: #B7B7B7;
+  color: #b7b7b7;
   margin-top: 20px;
   line-height: 1.2;
 }
@@ -935,14 +935,14 @@ h2 {
   font-size: 10px;
   line-height: 7px;
   font-weight: 500;
-  color: #6E6E6E;
+  color: #6e6e6e;
   padding: 20px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .about__card span {
-  color: #BCBCBC;
+  color: #bcbcbc;
   display: block;
   margin: 20px 0;
   font-size: 34px;
@@ -994,74 +994,107 @@ h2 {
   z-index: -1;
 }
 
+.way {
+  --way-pin-height: auto;
+  height: var(--way-pin-height);
+  position: relative;
+  overflow: visible;
+  transform: none;
+  /* когда пин — используем CSS-переменные, которые ставит JS */
+  /* верхняя часть остаётся sticky (внешний вид) */
+  /* оболочка, которая будет "пиниться" */
+  /* стек карточек: все абсолютны и центрированы */
+}
+.way__container {
+  width: 100%;
+  position: sticky;
+}
+.way__container.is-pinned {
+  top: -250px;
+  left: var(--pin-left, 0);
+  width: var(--pin-width, 100%);
+  z-index: 50;
+}
 .way__top {
+  position: relative;
+  z-index: 60;
+  height: 332px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+  overflow: hidden;
   background-image: url(../images/way.png);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0 -16px;
-  height: 332px;
-  position: relative;
-  overflow: hidden;
 }
 .way__top::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, 0.9) 100%);
 }
 .way__top * {
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 .way__bottom {
   padding: 20px 0 40px;
 }
+.way__pin {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .way__cards {
+  position: relative;
+  min-height: 300px;
+  display: block;
   margin-top: 30px;
 }
 .way__card {
+  --y-translate: -120px;
+  --scale: 1;
+  position: absolute;
+  left: 0%;
+  transform: translateY(var(--y-translate)) scale(var(--scale));
+  width: min(720px, 92%);
   padding: 24px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0px 0px 110px 0px rgba(0, 0, 0, 0.6);
+  background: #161616;
   border: 1px solid #262626;
-  background-color: #161616;
-  border-radius: 30px;
-}
-.way__card:last-child {
-  z-index: 2;
-  position: relative;
-  margin-top: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  will-change: transform, z-index, box-shadow;
+  transition: box-shadow 160ms linear;
+  transform-origin: center bottom;
 }
 .way__card-number {
-  color: #5B5B5B;
+  color: #5b5b5b;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
 }
 .way__card-title {
   font-size: 20px;
-  color: #CCCCCC;
+  color: #cccccc;
   font-weight: 500;
   line-height: 1.2;
 }
 .way__card-desc {
-  color: #8A8A8A;
+  color: #8a8a8a;
   line-height: 1.4;
 }
 
 h3 {
   font-size: 24px;
   line-height: 0.9;
-  color: #BEBEBE;
+  color: #bebebe;
 }
 
 .map {
@@ -1069,7 +1102,7 @@ h3 {
 }
 .map__icon {
   width: 100%;
-  margin-top: -200px;
+  margin-top: -40px;
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -1089,7 +1122,7 @@ h3 {
   gap: 24px;
 }
 .map__desc {
-  color: #B8B8B8;
+  color: #b8b8b8;
 }
 
 .big-cards {
@@ -1124,7 +1157,7 @@ h3 {
   z-index: -2;
 }
 .big-cards__desc {
-  color: #C4C1C0;
+  color: #c4c1c0;
 }
 .big-cards__btn {
   background: rgba(84, 84, 84, 0.1215686275);
@@ -1146,7 +1179,7 @@ h3 {
   gap: 24px;
 }
 .contact-block__subtitle {
-  color: #8A8A8A;
+  color: #8a8a8a;
 }
 .contact-block__form {
   display: flex;
@@ -1155,7 +1188,7 @@ h3 {
 }
 .contact-block__text {
   line-height: 1.4;
-  color: #8A8A8A;
+  color: #8a8a8a;
 }
 .contact-block__link {
   text-decoration: underline;
@@ -1166,13 +1199,13 @@ h3 {
 
 .video-block {
   border-radius: 24px;
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
 }
 select,
 input[type=text] {
   border-bottom: 1px solid rgba(124, 124, 124, 0.5019607843);
   background-color: inherit;
-  color: #8A8A8A;
+  color: #8a8a8a;
   padding: 10px 16px 18px;
   font-size: 12px;
   line-height: 8px;
@@ -1203,7 +1236,7 @@ input[type=text] {
   display: block;
   cursor: pointer;
   height: 374px;
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
 }
 .video-block__play-btn {
   position: absolute;
@@ -1356,10 +1389,10 @@ video {
   gap: 32px;
 }
 .page-header__headline {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 .page-header__subtitle {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .big-video {
@@ -1389,7 +1422,7 @@ video {
   gap: 10px;
 }
 .step-block__card {
-  color: #B7B7B7;
+  color: #b7b7b7;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1422,7 +1455,7 @@ video {
   min-width: 160px;
   border-radius: 25px;
   background: #575757;
-  color: #BBBBBB;
+  color: #bbbbbb;
   font-weight: 500;
   font-size: 10px;
   line-height: 7px;
@@ -1432,7 +1465,7 @@ video {
 }
 
 .filter-input:checked + .filter-text {
-  background: #BDBDBD;
+  background: #bdbdbd;
   color: #000;
 }
 
@@ -1508,7 +1541,7 @@ video {
 }
 
 .filters__text {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .products {
@@ -1524,7 +1557,7 @@ video {
 }
 
 .product-card {
-  color: #B7B7B7;
+  color: #b7b7b7;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1552,7 +1585,7 @@ video {
   line-height: 14px;
   padding: 13px 22px;
   background: rgba(255, 255, 255, 0.1215686275);
-  color: #C0C0C0;
+  color: #c0c0c0;
   border-radius: 50px;
   height: fit-content;
   white-space: nowrap;
@@ -1569,7 +1602,7 @@ video {
   backdrop-filter: initial;
 }
 .btn-black.btn:hover {
-  background-color: #CACACA;
+  background-color: #cacaca;
   opacity: 0.8;
 }
 
@@ -1589,7 +1622,7 @@ video {
   font-weight: 500;
   font-size: 24px;
   line-height: 1;
-  color: #B7B7B7;
+  color: #b7b7b7;
 }
 .contacts__text {
   color: #888888;
@@ -1626,6 +1659,12 @@ video {
   }
 }
 @media (min-width: 992px) {
+  .map__icon {
+    margin-top: -100px;
+  }
+  .way__container.is-pinned {
+    top: 80px;
+  }
   .header {
     position: relative;
     padding: 12px 0;
@@ -1646,7 +1685,7 @@ video {
     padding: 12px 26px;
   }
   .header__phone.btn:hover {
-    background: #CACACA;
+    background: #cacaca;
     color: #000;
   }
   .hero {
@@ -1704,7 +1743,7 @@ video {
     height: 243px;
   }
   .btn-white {
-    background: #CACACA;
+    background: #cacaca;
   }
   .types__text {
     margin-top: 24px;

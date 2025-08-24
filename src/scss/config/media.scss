@@ -11,13 +11,18 @@
     }
   }
 
-
   .hero__top {
     max-width: 400px;
   }
 }
 
 @media (min-width: 992px) {
+  .map__icon {
+    margin-top: -100px;
+  }
+  .way__container.is-pinned {
+    top: 80px;
+  }
   .header {
     position: relative;
     padding: 12px 0;
@@ -34,17 +39,16 @@
     &__phone.btn {
       display: block;
       margin-left: auto;
-      background-color: #5454541F;
+      background-color: #5454541f;
       backdrop-filter: blur(74px);
-      background: #5454541F;
+      background: #5454541f;
       padding: 12px 26px;
 
       &:hover {
-        background: #CACACA;
+        background: #cacaca;
         color: #000;
       }
     }
-
   }
 
   .hero {
@@ -62,11 +66,8 @@
 
   .btn {
     backdrop-filter: blur(74px);
-    background: #5454541F;
-
+    background: #5454541f;
   }
-
-
 
   .types {
     padding: 80px 0;
@@ -119,7 +120,7 @@
   }
 
   .btn-white {
-    background: #CACACA;
+    background: #cacaca;
   }
 
   .types__text {
@@ -180,7 +181,6 @@
       span {
         font-size: 48px;
         line-height: 34px;
-
       }
     }
 
@@ -218,7 +218,6 @@
   }
 
   .menu__item a,
-
   .menu__item {
     color: #707070;
     text-transform: uppercase;
@@ -300,7 +299,6 @@
         z-index: -1;
       }
     }
-
 
     &__img {
       display: block;
@@ -432,7 +430,6 @@
 
     .accordion {
       grid-area: 1 / 2 / 6 / 3;
-
     }
 
     .accordion-menu {
@@ -534,7 +531,6 @@
     color: #fff;
     font-weight: 400;
     line-height: 34px;
-
   }
 
   .contacts__phone {
@@ -548,7 +544,6 @@
   .contacts__right {
     max-width: 590px;
     width: 100%;
-
   }
 
   .contacts__left {
@@ -558,11 +553,8 @@
 }
 
 @media (min-width: 1100px) {
-
   .products__list {
     grid-template-columns: 1fr 1fr 1fr;
-
-
   }
 
   .types {
@@ -572,4 +564,5 @@
   }
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+}

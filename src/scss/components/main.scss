@@ -20,9 +20,12 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
-
 
   &__top {
     display: flex;
@@ -36,7 +39,7 @@
   }
 
   &__date {
-    color: #839D9B;
+    color: #839d9b;
   }
 
   &__bottom {
@@ -53,10 +56,8 @@
   }
 
   .btn {
-
     min-width: 188px;
   }
-
 
   &__anchor {
     display: flex;
@@ -74,7 +75,6 @@
 h1 {
   font-size: 32px;
   line-height: 0.9;
-
 }
 
 .btn {
@@ -90,25 +90,25 @@ h1 {
   position: relative;
   background-color: inherit;
   overflow: hidden;
-  border: 1px solid #BABABA;
-  color: #FFFFFFCC;
+  border: 1px solid #bababa;
+  color: #ffffffcc;
   border-radius: 50px;
   transition-property: all !important;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     color: #161616;
-    background-color: #FFFFFFCC;
+    background-color: #ffffffcc;
   }
 }
 
 .btn-white {
-  background-color: #CACACA;
+  background-color: #cacaca;
   color: #000;
 
   &:hover {
-    color: #CACACA;
-    background: #5454541F;
+    color: #cacaca;
+    background: #5454541f;
     backdrop-filter: blur(74px);
   }
 }
@@ -116,7 +116,7 @@ h1 {
 h2 {
   font-size: 30px;
   line-height: 1.1;
-  color: #B7B7B7;
+  color: #b7b7b7;
 }
 
 .types {
@@ -126,7 +126,8 @@ h2 {
     gap: 40px;
   }
 
-  &__headline {}
+  &__headline {
+  }
 
   &__list {
     display: flex;
@@ -155,7 +156,7 @@ h2 {
   }
 
   &__title {
-    color: #B7B7B7;
+    color: #b7b7b7;
   }
 
   &__number {
@@ -173,7 +174,7 @@ h2 {
     font-size: 8px;
 
     span {
-      color: #B7B7B7;
+      color: #b7b7b7;
       text-transform: uppercase;
     }
   }
@@ -186,12 +187,14 @@ h2 {
     display: none;
   }
 
-  &__container {}
+  &__container {
+  }
 
-  &__headline {}
+  &__headline {
+  }
 
   &__desc {
-    color: #B7B7B7;
+    color: #b7b7b7;
     margin-top: 20px;
     line-height: 1.2;
   }
@@ -211,14 +214,14 @@ h2 {
     font-size: 10px;
     line-height: 7px;
     font-weight: 500;
-    color: #6E6E6E;
+    color: #6e6e6e;
     padding: 20px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
 
     span {
-      color: #BCBCBC;
+      color: #bcbcbc;
       display: block;
       margin: 20px 0;
       font-size: 34px;
@@ -228,7 +231,6 @@ h2 {
   }
 }
 
-
 .portfolio {
   padding: 40px 0;
 
@@ -236,9 +238,11 @@ h2 {
     gap: 40px;
   }
 
-  &__headline {}
+  &__headline {
+  }
 
-  &__slider {}
+  &__slider {
+  }
 
   &__img {
     height: 320px;
@@ -246,9 +250,7 @@ h2 {
     object-position: center 70%;
     object-fit: cover;
     border-radius: 30px;
-
   }
-
 }
 
 .splide__arrows {
@@ -279,72 +281,103 @@ h2 {
     content: '';
     position: absolute;
     inset: 0;
-    background: #FFFFFF14;
+    background: #ffffff14;
     z-index: -1;
   }
 }
 
 .way {
-  &__container {}
+  --way-pin-height: auto;
+  height: var(--way-pin-height);
+  position: relative;
+  overflow: visible;
+  transform: none;
+  &__container {
+    width: 100%;
+    position: sticky;
+  }
 
+  /* когда пин — используем CSS-переменные, которые ставит JS */
+  &__container.is-pinned {
+    top: -250px;
+    left: var(--pin-left, 0);
+    width: var(--pin-width, 100%);
+    z-index: 50;
+  }
+
+  /* верхняя часть остаётся sticky (внешний вид) */
   &__top {
+    position: relative;
+    z-index: 60;
+    height: 332px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
+    overflow: hidden;
     background-image: url(../images/way.png);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0 -16px;
-    height: 332px;
-    position: relative;
-    overflow: hidden;
-
     &::after {
       content: '';
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 38%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
     }
-
     * {
-      z-index: 2;
       position: relative;
+      z-index: 2;
     }
   }
-
 
   &__bottom {
     padding: 20px 0 40px;
   }
 
+  /* оболочка, которая будет "пиниться" */
+  &__pin {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   &__cards {
+    position: relative;
+    min-height: 300px;
+    display: block;
     margin-top: 30px;
   }
 
+  /* стек карточек: все абсолютны и центрированы */
   &__card {
+    --y-translate: -120px;
+    --scale: 1;
+    position: absolute;
+    left: 0%;
+    transform: translateY(var(--y-translate)) scale(var(--scale));
+    width: min(720px, 92%);
     padding: 24px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    box-shadow: 0px 0px 110px 0px #00000099;
+    background: #161616;
     border: 1px solid #262626;
-    background-color: #161616;
-    border-radius: 30px;
-
-    &:last-child {
-      z-index: 2;
-      position: relative;
-      margin-top: 16px;
-      // transform: translateY(-100px);
-    }
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    will-change: transform, z-index, box-shadow;
+    transition: box-shadow 160ms linear;
+    transform-origin: center bottom;
   }
 
   &__card-number {
-    color: #5B5B5B;
+    color: #5b5b5b;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
@@ -352,13 +385,13 @@ h2 {
 
   &__card-title {
     font-size: 20px;
-    color: #CCCCCC;
+    color: #cccccc;
     font-weight: 500;
     line-height: 1.2;
   }
 
   &__card-desc {
-    color: #8A8A8A;
+    color: #8a8a8a;
     line-height: 1.4;
   }
 }
@@ -366,7 +399,7 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: 0.9;
-  color: #BEBEBE;
+  color: #bebebe;
 }
 
 .map {
@@ -374,7 +407,7 @@ h3 {
 
   &__icon {
     width: 100%;
-    margin-top: -200px;
+    margin-top: -40px;
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -398,11 +431,9 @@ h3 {
     gap: 24px;
   }
 
-
   &__desc {
-    color: #B8B8B8;
+    color: #b8b8b8;
   }
-
 }
 
 .big-cards {
@@ -428,7 +459,11 @@ h3 {
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%),
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 38.41%,
+          rgba(0, 0, 0, 0.9) 100%
+        ),
         linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     }
@@ -442,14 +477,15 @@ h3 {
     z-index: -2;
   }
 
-  &__title {}
+  &__title {
+  }
 
   &__desc {
-    color: #C4C1C0;
+    color: #c4c1c0;
   }
 
   &__btn {
-    background: #5454541F;
+    background: #5454541f;
     backdrop-filter: blur(74px);
     padding: 14px 20px;
   }
@@ -470,10 +506,11 @@ h3 {
     gap: 24px;
   }
 
-  &__headline {}
+  &__headline {
+  }
 
   &__subtitle {
-    color: #8A8A8A;
+    color: #8a8a8a;
   }
 
   &__form {
@@ -482,50 +519,50 @@ h3 {
     gap: 24px;
   }
 
-  &__input {}
+  &__input {
+  }
 
-  &__btn {}
+  &__btn {
+  }
 
   &__text {
     line-height: 1.4;
-    color: #8A8A8A;
+    color: #8a8a8a;
   }
 
   &__link {
     text-decoration: underline;
-
   }
 
   &__video-block {
     margin-top: 40px;
   }
-
-
 }
 
 .video-block {
   border-radius: 24px;
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+  background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
 
-  &__player {}
+  &__player {
+  }
 
-  &__play-btn {}
+  &__play-btn {
+  }
 
-  &__play-icon {}
-
+  &__play-icon {
+  }
 }
 
 select,
 input[type='text'] {
-  border-bottom: 1px solid #7C7C7C80;
+  border-bottom: 1px solid #7c7c7c80;
   background-color: inherit;
-  color: #8A8A8A;
+  color: #8a8a8a;
 
   padding: 10px 16px 18px;
   font-size: 12px;
   line-height: 8px;
-
 }
 
 .splide {
@@ -540,15 +577,20 @@ input[type='text'] {
     background-color: inherit;
   }
 
-  &__arrow--prev {}
+  &__arrow--prev {
+  }
 
-  &__arrow--next {}
+  &__arrow--next {
+  }
 
-  &__track {}
+  &__track {
+  }
 
-  &__list {}
+  &__list {
+  }
 
-  &__slide {}
+  &__slide {
+  }
 
   &__slide__container {
     max-width: none;
@@ -567,9 +609,8 @@ input[type='text'] {
     display: block;
     cursor: pointer;
     height: 374px;
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+    background: linear-gradient(0deg, #ffffff, #ffffff),
       linear-gradient(180deg, rgba(0, 0, 0, 0) 38.41%, rgba(0, 0, 0, 0.9) 100%);
-
   }
 
   &__play-btn {
@@ -586,8 +627,6 @@ input[type='text'] {
     color: #000;
   }
 }
-
-
 
 .contacts__map-block {
   height: 472px;
@@ -626,7 +665,8 @@ input[type='text'] {
   }
 }
 
-.contacts__map-icon {}
+.contacts__map-icon {
+}
 
 .contacts__btn {
   position: absolute;
@@ -744,15 +784,13 @@ video {
   }
 
   &__headline {
-    color: #D3D3D3;
+    color: #d3d3d3;
   }
 
   &__subtitle {
-    color: #BDBDBD;
+    color: #bdbdbd;
   }
-
 }
-
 
 .big-video {
   margin: 40px 0;
@@ -770,7 +808,6 @@ video {
   &__video-block {
     border-radius: 30px;
   }
-
 }
 
 .step-block {
@@ -780,7 +817,8 @@ video {
     gap: 24px;
   }
 
-  &__headline {}
+  &__headline {
+  }
 
   &__list {
     display: flex;
@@ -789,7 +827,7 @@ video {
   }
 
   &__card {
-    color: #B7B7B7;
+    color: #b7b7b7;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -807,7 +845,8 @@ video {
     line-height: 35px;
   }
 
-  &__desc {}
+  &__desc {
+  }
 }
 
 .filter-item {
@@ -828,7 +867,7 @@ video {
   min-width: 160px;
   border-radius: 25px;
   background: #575757;
-  color: #BBBBBB;
+  color: #bbbbbb;
   font-weight: 500;
   font-size: 10px;
   line-height: 7px;
@@ -837,13 +876,13 @@ video {
   transition: all 0.3s ease;
 }
 
-.filter-input:checked+.filter-text {
-  background: #BDBDBD;
+.filter-input:checked + .filter-text {
+  background: #bdbdbd;
   color: #000;
 }
 
 .filter-text:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .page-header {
@@ -856,18 +895,16 @@ video {
     z-index: 999;
   }
 
-  &__filters {}
+  &__filters {
+  }
 }
-
-
 
 .icon--close {
   display: none;
 }
 
 .filters {
-  position:
-    absolute;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -885,7 +922,6 @@ video {
       transform: none;
     }
   }
-
 }
 
 .filters__icon {
@@ -913,7 +949,7 @@ video {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 16px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .filters__list {
@@ -931,7 +967,7 @@ video {
 }
 
 .filters__text {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .products {
@@ -941,18 +977,18 @@ video {
     gap: 24px;
   }
 
-  &__headline {}
+  &__headline {
+  }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
-
 }
 
 .product-card {
-  color: #B7B7B7;
+  color: #b7b7b7;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -982,8 +1018,8 @@ video {
     font-weight: 500;
     line-height: 14px;
     padding: 13px 22px;
-    background: #FFFFFF1F;
-    color: #C0C0C0;
+    background: #ffffff1f;
+    color: #c0c0c0;
     border-radius: 50px;
     height: fit-content;
     white-space: nowrap;
@@ -998,18 +1034,17 @@ video {
     gap: 16px;
   }
 
-  &___btn {}
-
+  &___btn {
+  }
 }
-
 
 .btn-black.btn {
   background-color: #111;
   backdrop-filter: initial;
 
   &:hover {
-    background-color: #CACACA;
-    opacity: .8;
+    background-color: #cacaca;
+    opacity: 0.8;
   }
 }
 
@@ -1032,14 +1067,12 @@ video {
     font-weight: 500;
     font-size: 24px;
     line-height: 1;
-    color: #B7B7B7;
+    color: #b7b7b7;
   }
 
   &__text {
     color: #888888;
   }
-
-
 
   &__right {
     position: relative;
