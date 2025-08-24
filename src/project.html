@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'Деревянный каркас — 12' })
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html')
+
+    <main class="page">
+      <section class="page-header">
+        <div class="page-header__container">
+          <h1 class="page-header__headline">
+            Деревянный каркас — 12
+          </h1>
+        </div>
+      </section>
+      <section id='main-carousel' class="splide">
+        <div class="main-carousel__container">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/product1.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/product2.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/product3.png" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="product-present">
+        <div class="product-present__container">
+          <div id="thumbnail-carousel" class="splide"
+            aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
+                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 21.5L1.70711 12.2071C1.31658 11.8166 1.31658 11.1834 1.70711 10.7929L11 1.5"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+              <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
+                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L10.2929 10.7929C10.6834 11.1834 10.6834 11.8166 10.2929 12.2071L1 21.5" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./images/product1.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/product2.png" alt="">
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/product3.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-present__bottom">
+            <div class="product-present__block">
+              <h3 class="product-present__title">
+                Описание и комплектация проекта
+              </h3>
+              <p class="product-present__desc text-small">
+                Каркасный двухэтажный дом площадью 160 квадратных метров — это просторное и функциональное жилище,
+                построенное по современной строительной технологии. Он сочетает в себе прочность, энергоэффективность и
+                удобство, что делает его идеальным выбором для загородного проживания или дачи.
+              </p>
+              <ul class='product-present__desc-list text-small'>
+                <li>
+                  Теплый контур
+                </li>
+                <li>Несущий контур</li>
+                <li>Окна, стеклопакеты и двери;</li>
+                <li>Наружная отделка;</li>
+                <li>Утепление;</li>
+              </ul>
+            </div>
+            <div class="product-present__properties properties">
+              <h3 class="product-present__title">Характеристики</h3>
+              <div class="properties__group text-small">
+                <div class="properties__item">
+                  <img src="./images/property-square.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Площадь
+                    <span>66 м²</span>
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-ruler.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Размер
+                    <span>6 х 6,6 м</span>
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-house.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Кол-во этажей
+                    <span>2 этажа</span>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="properties__group text-small">
+                <div class="properties__item">
+                  <img src="./images/property-room.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    2 комнаты
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-bath.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Санузел
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-time.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Реализация: 4-6 месяцев
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-sun.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Терраса
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-kitchen.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>
+                    Кухня
+                  </p>
+                </div>
+                <div class="properties__item">
+                  <img src="./images/property-peoples.svg" alt="" class="properties__icon">
+                  <p class='properties__value'>Для 2-4 человек
+
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-white properties__btn" data-type='popup-1'>
+                оставить заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="advantages">
+        <div class="advantages__container">
+          <h3 class="advantages__title">Каркасный дом - технология,<br> преимущества, недостатки</h3>
+          @@include('html/accordionExample.html')
+        </div>
+      </section>
+      <section class="products">
+        <div class="products__container">
+          <h2 class="products__headline">Другие проекты</h2>
+          <div class="products__list">
+            <div class="products__item product-card">
+              <img src="./images/product1.png" alt="" class="product-card__img">
+              <div class="product-card__top">
+                <div class="product-card__title">Деревянный каркас — 16</div>
+                <div class="product-card__price">9 508 752 ₽</div>
+              </div>
+              <p class="product-card__text text-small">Этажность: 1</p>
+              <p class="product-card__text text-small">Общая площадь: 200 м²</p>
+              <div class="product-card__buttons">
+                <button class="product-card___btn btn btn-white">оставить заявку</button>
+                <a class="product-card___btn btn btn-black" href='#'>Подробнее</a>
+              </div>
+            </div>
+            <div class="products__item product-card">
+              <img src="./images/product2.png" alt="" class="product-card__img">
+              <div class="product-card__top">
+                <div class="product-card__title">Деревянный каркас — 15</div>
+                <div class="product-card__price">9 508 752 ₽</div>
+              </div>
+              <p class="product-card__text text-small">Этажность: 1</p>
+              <p class="product-card__text text-small">Общая площадь: 200 м²</p>
+              <div class="product-card__buttons">
+                <button class="product-card___btn btn btn-white">оставить заявку</button>
+                <a class="product-card___btn btn btn-black" href='#'>Подробнее</a>
+              </div>
+            </div>
+            <div class="products__item product-card">
+              <img src="./images/product3.png" alt="" class="product-card__img">
+              <div class="product-card__top">
+                <div class="product-card__title">Деревянный каркас — 14</div>
+                <div class="product-card__price">9 508 752 ₽</div>
+              </div>
+              <p class="product-card__text text-small">Этажность: 1</p>
+              <p class="product-card__text text-small">Общая площадь: 200 м²</p>
+              <div class="product-card__buttons">
+                <button class="product-card___btn btn btn-white">оставить заявку</button>
+                <a class="product-card___btn btn btn-black" href='#'>Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/contactForm.html')
+    </main>
+
+    @@include('html/footer.html')
+  </div>
+
+  @@include('html/popupExample.html') @@include('html/script.html')
+</body>
+
+</html>

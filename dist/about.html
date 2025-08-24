@@ -221,7 +221,7 @@
             <input class="contact-block__input form__input" type="text" placeholder="+7 (999) 999 99 99" required>
           </div>
 
-          <button class="btn contact-block__btn btn-white" type="submit">
+          <button class="btn btn-white contact-block__btn" type="submit">
             подробнее
           </button>
           <p class="text-small contact-block__text">Отправляя заявку, Вы соглашаетесь с
@@ -319,45 +319,46 @@
   <div class="popup__wrapper" data-close-overlay>
     <div class="popup__content">
       <div class="popup__container">
-        <button class="button-close popup__close" type="button">x</button>
+        <button class="button-close popup__close" type="button">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.875 1.125L1.125 10.875M1.125 1.125L10.875 10.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
         <div class="popup__body">
           <h2 data-aos="fade-up" class="popup__headline">
-            Заполните <br>
+            Заполните
             форму
           </h2>
-          <p class="text-small popup__text">
-            и наш специалист свяжется с вами в течении полу часа
+          <p class="popup__text">
+            и наш консультант свяжется с вами <br> в течении 30 минут
           </p>
-          <form class="contact-block__form">
-            <input class="contact-block__input" type="text" class="form__input" placeholder="Ваше имя" required>
-            <input class="contact-block__input" type="text" class="form__input" placeholder="Телефон" required>
-            <select class="contact-block__select" name="" id="" required>
-              <option value="" disabled="disabled" selected="selected" hidden>
-                Как с вами связаться?
-              </option>
-              <option value="phone">Телефон</option>
-              <option value="telegram">Telegram</option>
-              <option value="whatsapp">WhatsApp</option>
-            </select>
-            <label class="text-small checkbox contact-block__checkbox">
-              <input class="checkbox__input" type="checkbox" name="agreement" required>
-              <span class="checkbox__box"></span>
-              Согласен на обработку персональных данных
-            </label>
-            <button class="btn contact-block__btn" type="submit">
-              <span> Отправить </span>
+          <form class="contact-block__form" data-aos="fade-up">
+            <input class="contact-block__input form__input" type="text" placeholder="Имя" required>
+            <div class="form__input--phone">
+              <input class="contact-block__input form__input" type="text" placeholder="+7 (999) 999 99 99" required>
+            </div>
+
+            <button class="btn btn-white contact-block__btn" type="submit">
+              отправить
+
             </button>
+            <p class="text-small contact-block__text">Отправляя заявку, Вы соглашаетесь с
+              <a href="#" class="contact-block__link">
+                Политикой
+                конфиденциальности
+              </a>
+            </p>
           </form>
         </div>
       </div>
     </div>
   </div>
-</div>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 500 });
-</script>
+</div> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script src="js/app.min.js"></script>
+<script>
+  AOS.init({ duration: 500, once: true });
+</script>
 </body>
 
 </html>

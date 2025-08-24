@@ -117,6 +117,25 @@ if (document.querySelector('.portfolio__slider')) {
     rewind: true,
   }).mount();
 }
+if (document.querySelector('#main-carousel')) {
+  var main = new Splide('#main-carousel', {
+    type: 'fade',
+    rewind: true,
+    pagination: false,
+    arrows: false,
+  });
+
+  var thumbnails = new Splide('#thumbnail-carousel', {
+    gap: 10,
+    rewind: true,
+    pagination: false,
+    isNavigation: true,
+  });
+
+  main.sync(thumbnails);
+  main.mount();
+  thumbnails.mount();
+}
 if (document.querySelector('.popular-reviews__slider')) {
   var splide2 = new Splide('.popular-reviews__slider', {
     type: 'slide',
